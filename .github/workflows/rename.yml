@@ -17,7 +17,7 @@ jobs:
       - name: Find and replace module paths in .go files
         # 使用 find 结合 xargs 和 sed 来高效地批量替换
         run: |
-          find . -type f -name "*.go" -print0 | xargs -0 sed -i 's|github.com/labulakalia/water|github.com/XLESSGo/water|g'
+          find . -type f -name "*.go" -print0 | xargs -0 sed -i 's|github.com/XLESSGo/water|github.com/XLESSR/water|g'
 
       # 步骤 3: 更新 go.mod 文件中的模块名
       - name: Update go.mod
@@ -25,19 +25,19 @@ jobs:
           # 确保安装了 Go 语言环境
           sudo apt-get update && sudo apt-get install golang-go
           # 使用 go mod edit 命令更新模块名
-          go mod edit -module github.com/XLESSGo/water
+          go mod edit -module github.com/XLESSR/water
           
      # Step 4: Configure Git user for commit
       - name: Configure Git User
         run: |
-          git config user.name "DarienRaymond"
-          git config user.email "admin@v2ray.com"
+          git config user.name "xlesser"
+          git config user.email "310927920+xlesser@users.noreply.github.com"
 
       # Step 5: Commit the changes
       - name: Commit changes
         run: |
           git add .
-          git commit -m "Rename Go Module: v4ray to v2ray"
+          git commit -m "Rename Go Module"
 
       # Step 6: Push the changes back to the repository
       - name: Push changes
