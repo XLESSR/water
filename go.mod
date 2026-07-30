@@ -1,4 +1,4 @@
-module github.com/XLESSGo/water
+module github.com/XLESSR/water
 
 go 1.19
 

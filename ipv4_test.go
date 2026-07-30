@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XLESSGo/water/waterutil"
+	"github.com/XLESSR/water/waterutil"
 )
 
 const BUFFERSIZE = 1522
