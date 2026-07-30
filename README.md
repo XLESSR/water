@@ -1,5 +1,7 @@
 # water
 
+> This project is licensed under The Unlicense for new contributions, but contains upstream code originally authored by @songgao under the BSD 3-Clause License (see LICENSE-upstream).
+
 `water` is a native Go library for [TUN/TAP](http://en.wikipedia.org/wiki/TUN/TAP) interfaces.
 
 `water` is designed to be simple and efficient. It
