@@ -38,6 +38,12 @@ type PlatformSpecificParams struct {
 	// uses multiple file descriptors (queues) to parallelize packets sending
 	// or receiving.
 	MultiQueue bool
+
+	VNetHdr      bool   // 启用 Virtio-net header 传输
+	VNetHdrSize  int    // Virtio-net header 尺寸
+	NoChecksum   bool   // 旁路校验和验证以提升速度
+	Exclusive    bool   // 强制独占模式（若网卡已存在则报错）
+	OffloadFlags uint32 // GSO/TSO 硬件卸载标志
 }
 
 func defaultPlatformSpecificParams() PlatformSpecificParams {
